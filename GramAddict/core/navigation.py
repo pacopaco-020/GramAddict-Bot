@@ -49,10 +49,22 @@ def nav_to_blogger(device, username, current_job):
         search_view = TabBarView(device).navigateToSearch()
         if not search_view.navigate_to_target(username, current_job):
             return False
-        logger.info("Waiting 8 seconds for search results to load due to slow connection.")
-        sleep(8)
 
-        profile_view = ProfileView(device, is_own_profile=False)
+        logger.info("Waiting up to 20 seconds for profile to load (dynamic check).")
+        max_wait = 20
+        poll_interval = 2
+        loaded = False
+        for _ in range(max_wait // poll_interval):
+            temp_view = ProfileView(device, is_own_profile=False)
+            if temp_view._getUsernameView().exists(Timeout.SHORT):
+                loaded = True
+                break
+            sleep(poll_interval)
+        if not loaded:
+            logger.warning("Profile failed to load within 20 seconds. Skipping.")
+            return False
+
+        profile_view = temp_view
         if _to_followers:
             logger.info(f"Open @{username} followers.")
             profile_view.navigateToFollowers()
@@ -68,10 +80,21 @@ def nav_to_hashtag_or_place(device, target, current_job):
     search_view = TabBarView(device).navigateToSearch()
     if not search_view.navigate_to_target(target, current_job):
         return False
-    logger.info("Waiting 8 seconds for search results to load due to slow connection.")
-    sleep(8)
 
-    TargetView = HashTagView if current_job.startswith("hashtag") else PlacesView
+    logger.info("Waiting up to 20 seconds for results to load (dynamic check).")
+    max_wait = 20
+    poll_interval = 2
+    loaded = False
+    for _ in range(max_wait // poll_interval):
+        TargetView = HashTagView if current_job.startswith("hashtag") else PlacesView
+        result_view = TargetView(device)._getRecyclerView()
+        if result_view.exists(Timeout.SHORT):
+            loaded = True
+            break
+        sleep(poll_interval)
+    if not loaded:
+        logger.warning("Results failed to load within 20 seconds. Skipping.")
+        return False
 
     if current_job.endswith("recent"):
         logger.info("Switching to Recent tab.")
@@ -86,7 +109,6 @@ def nav_to_hashtag_or_place(device, target, current_job):
             if UniversalActions(device)._check_if_no_posts():
                 return False
 
-    result_view = TargetView(device)._getRecyclerView()
     FistImageInView = TargetView(device)._getFistImageView(result_view)
     if FistImageInView.exists():
         logger.info(f"Opening the first result for {target}.")
@@ -107,9 +129,22 @@ def nav_to_post_likers(device, username, my_username):
         search_view = TabBarView(device).navigateToSearch()
         if not search_view.navigate_to_target(username, "account"):
             return False
-        logger.info("Waiting 8 seconds for search results to load due to slow connection.")
-        sleep(8)
-    profile_view = ProfileView(device)
+
+        logger.info("Waiting up to 20 seconds for profile to load (dynamic check).")
+        max_wait = 20
+        poll_interval = 2
+        loaded = False
+        for _ in range(max_wait // poll_interval):
+            temp_view = ProfileView(device)
+            if temp_view._getUsernameView().exists(Timeout.SHORT):
+                loaded = True
+                break
+            sleep(poll_interval)
+        if not loaded:
+            logger.warning("Profile failed to load within 20 seconds. Skipping.")
+            return False
+
+    profile_view = temp_view
     is_private = profile_view.isPrivateAccount()
     posts_count = profile_view.getPostsCount()
     is_empty = posts_count == 0
