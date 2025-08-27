@@ -156,6 +156,20 @@ def check_adb_connection():
     devices_count = len(re.findall("device\n", output))
     stream.close()
 
+    if devices_count == 0:
+        logger.warning("No devices detected. Attempting to restart ADB server.")
+        os.system("adb kill-server")
+        sleep(2)
+        os.system("adb start-server")
+        sleep(2)
+        # Recheck after restart
+        stream = os.popen("adb devices")
+        output = stream.read()
+        devices_count = len(re.findall("device\n", output))
+        stream.close()
+        if devices_count == 0:
+            logger.error("ADB restart failed. Still no devices detected.")
+
     is_ok = True
     message = "That's ok."
     if devices_count == 0:

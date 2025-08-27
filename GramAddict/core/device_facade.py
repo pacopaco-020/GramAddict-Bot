@@ -84,15 +84,24 @@ class DeviceFacade:
     def __init__(self, device_id, app_id):
         self.device_id = device_id
         self.app_id = app_id
-        try:
-            if device_id is None or "." not in device_id:
-                self.deviceV2 = uiautomator2.connect(
-                    "" if device_id is None else device_id
-                )
-            else:
-                self.deviceV2 = uiautomator2.connect_adb_wifi(f"{device_id}")
-        except ImportError:
-            raise ImportError("Please install uiautomator2: pip3 install uiautomator2")
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                if device_id is None or "." not in device_id:
+                    self.deviceV2 = uiautomator2.connect(
+                        "" if device_id is None else device_id
+                    )
+                else:
+                    self.deviceV2 = uiautomator2.connect_adb_wifi(f"{device_id}")
+                break
+            except ImportError:
+                raise ImportError("Please install uiautomator2: pip3 install uiautomator2")
+            except Exception as e:
+                logger.warning(f"Connection attempt {attempt+1}/{max_retries} failed: {str(e)}")
+                if attempt < max_retries - 1:
+                    sleep(2)
+                else:
+                    raise ConnectionError(f"Failed to connect to device after {max_retries} attempts: {str(e)}")
 
     def _get_current_app(self):
         try:

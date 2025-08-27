@@ -99,7 +99,20 @@ def start_bot(**kwargs):
             "You have to specify one of these actions: " + ", ".join(configs.actions)
         )
         return
-    device = create_device(configs.device_id, configs.app_id)
+
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            device = create_device(configs.device_id, configs.app_id)
+            break
+        except Exception as e:
+            logger.warning(f"Device creation attempt {attempt+1}/{max_retries} failed: {str(e)}")
+            if attempt < max_retries - 1:
+                sleep(5)
+            else:
+                logger.error(f"Failed to create device after {max_retries} attempts. Aborting.")
+                return
+
     session_state = None
     if str(configs.args.total_sessions) != "-1":
         total_sessions = get_value(configs.args.total_sessions, None, -1)
