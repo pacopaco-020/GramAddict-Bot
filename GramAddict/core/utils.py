@@ -758,13 +758,20 @@ def inspect_current_view(user_list) -> Tuple[int, int]:
     """
     return the number of users and each row height in the current view
     """
-    user_list.wait()
-    lst = [item.get_height() for item in user_list if item.wait()]
-    if not lst:
-        raise EmptyList
-    row_height, n_users = Counter(lst).most_common()[0]
-    logger.debug(f"There are {n_users} users fully visible in that view.")
-    return row_height, n_users
+    max_retries = 3
+    for attempt in range(max_retries):
+        user_list.wait()
+        lst = [item.get_height() for item in user_list if item.wait()]
+        if not lst:
+            if attempt < max_retries - 1:
+                logger.warning(f"User list appears empty (attempt {attempt+1}/{max_retries}). Waiting 3 seconds before retry.")
+                sleep(3)
+                continue
+            else:
+                raise EmptyList
+        row_height, n_users = Counter(lst).most_common()[0]
+        logger.debug(f"There are {n_users} users fully visible in that view.")
+        return row_height, n_users
 
 
 class ActionBlockedError(Exception):

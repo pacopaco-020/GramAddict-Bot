@@ -1,5 +1,6 @@
 import logging
 import sys
+from time import sleep
 
 from colorama import Fore
 
@@ -48,6 +49,8 @@ def nav_to_blogger(device, username, current_job):
         search_view = TabBarView(device).navigateToSearch()
         if not search_view.navigate_to_target(username, current_job):
             return False
+        logger.info("Waiting 8 seconds for search results to load due to slow connection.")
+        sleep(8)
 
         profile_view = ProfileView(device, is_own_profile=False)
         if _to_followers:
@@ -65,6 +68,8 @@ def nav_to_hashtag_or_place(device, target, current_job):
     search_view = TabBarView(device).navigateToSearch()
     if not search_view.navigate_to_target(target, current_job):
         return False
+    logger.info("Waiting 8 seconds for search results to load due to slow connection.")
+    sleep(8)
 
     TargetView = HashTagView if current_job.startswith("hashtag") else PlacesView
 
@@ -102,6 +107,8 @@ def nav_to_post_likers(device, username, my_username):
         search_view = TabBarView(device).navigateToSearch()
         if not search_view.navigate_to_target(username, "account"):
             return False
+        logger.info("Waiting 8 seconds for search results to load due to slow connection.")
+        sleep(8)
     profile_view = ProfileView(device)
     is_private = profile_view.isPrivateAccount()
     posts_count = profile_view.getPostsCount()
