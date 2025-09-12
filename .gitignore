@@ -2,12 +2,59 @@
 accounts/
 
 # Auto run scripts
-auto_run*.sh
+scripts/auto_run*.sh
 
 # Virtual environments
 .venv39/
 venv*/
 .venv*/
+venv39/
+
+# Instamatic specific files
+device_manager.log
+uiautomator2_monitor.log
+remote:tcp:*
+
+# Instagram APK and resource files
+instagram_apks_demo/
+extracted_resources/
+device_extracted_resources/
+compatibility_test/
+test_resources/
+test_v300_v320/
+instagram_apk_scanner.py
+instagram_resource_extractor.py
+instagram_version_comparator.py
+instagram_apk_scanner.py
+extract_from_device.py
+find_compatible_versions.py
+update_bot_resources.py
+test_instagram_tools.py
+test_v300_to_v320.py
+quick_demo.sh
+quick_scan.sh
+real_device_workflow.sh
+bot_maintenance_workflow.sh
+setup_instagram_tools.sh
+INSTAGRAM_VERSION_FINDER.md
+README_INSTAGRAM_TOOLS.md
+INTEGRATION_GUIDE.md
+v320_compatibility_report.md
+comprehensive_compatibility_matrix_v300_v320.txt
+comprehensive_compatibility_report_v300_v320.txt
+comprehensive_scan_results_v300_v320.json
+device_compatibility_matrix_v300_v320.txt
+device_compatibility_report_v300_v320.txt
+device_compatibility_results_v300_v320.json
+test_compatibility_matrix.txt
+test_compatibility_report.txt
+test_scan_results.json
+v320_resources.txt
+
+# Old GramAddict files (renamed to Instamatic)
+gramaddict_device_facade_fix.sh
+gramaddict_navigation_fix.patch
+gramaddict_v300_ui_fix.sh
 
 # Python
 __pycache__/

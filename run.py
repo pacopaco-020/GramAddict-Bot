@@ -5,9 +5,9 @@ import argparse
 
 # Architecture self-correction for macOS
 def test_import():
-    """Test if we can import GramAddict without architecture issues"""
+    """Test if we can import Instamatic without architecture issues"""
     try:
-        import GramAddict
+        import Instamatic
         return True
     except ImportError as e:
         if "incompatible architecture" in str(e) or "have 'arm64', need 'x86_64'" in str(e):
@@ -24,7 +24,7 @@ if sys.platform == "darwin":
     
     print(f"Running on {platform.machine()} architecture")
 
-import GramAddict
+import Instamatic
 
 # Parse command line arguments
 parser = argparse.ArgumentParser()
@@ -33,5 +33,5 @@ parser.add_argument("--config", help="Path to config file")
 parser.add_argument("--device", help="Device ID")
 args = parser.parse_args()
 
-# Pass arguments to GramAddict
-GramAddict.run()
+# Pass arguments to Instamatic
+Instamatic.run()

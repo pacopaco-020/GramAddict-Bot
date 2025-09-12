@@ -1,307 +1,722 @@
+# Instamatic
+
 <p align="center">
-  <img src="https://github.com/GramAddict/bot/raw/master/res/logo.png" alt="logo">
+  <img src="https://github.com/Instamatic/bot/raw/master/res/logo.png" alt="Instamatic Logo">
   <br />
-  <h1 align="center">GramAddict</h1>
+  <h1 align="center">Instamatic</h1>
   <br />
-  <p align="center">Looking for Instagram automation? I'm proud to present you a <b>100% free and open source Instagram bot</b>. This bot will allow you to grow your following and engagement by liking, following, commenting and sending PM automatically with your Android phone/tablet/emulator. <b>No root required.</b> <p>
+  <p align="center">Professional Instagram automation tool for Android devices. Grow your following and engagement with human-like interactions - <b>100% free and open source</b>. <b>No root required.</b></p>
   <p align="center">
-    <a href="https://github.com/gramaddict/bot/blob/master/LICENSE">
-      <img src="https://img.shields.io/github/license/gramaddict/bot?style=flat"  alt=""/>
+    <a href="https://github.com/Instamatic/bot/blob/master/LICENSE">
+      <img src="https://img.shields.io/github/license/Instamatic/bot?style=flat" alt="License"/>
     </a>
     <a href="https://www.python.org/">
-      <img src="https://img.shields.io/badge/built%20with-Python3-red.svg?style=flat"  alt=""/>
+      <img src="https://img.shields.io/badge/built%20with-Python3-red.svg?style=flat" alt="Python"/>
     </a>
-    <a href="https://github.com/GramAddict/bot/pulls">
-      <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat"  alt=""/>
+    <a href="https://github.com/Instamatic/bot/pulls">
+      <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs Welcome"/>
     </a>
-    <a href="https://github.com/GramAddict/bot/issues">
-    	<img src="https://img.shields.io/github/issues/gramaddict/bot?style=flat"  alt=""/>
+    <a href="https://github.com/Instamatic/bot/issues">
+      <img src="https://img.shields.io/github/issues/Instamatic/bot?style=flat" alt="Issues"/>
     </a>
-    <a href="https://github.com/GramAddict/bot/pulls">
-      <img src="https://img.shields.io/github/issues-pr/gramaddict/bot?style=flat"  alt=""/>
+    <a href="https://github.com/Instamatic/bot/stargazers">
+      <img src="https://img.shields.io/github/stars/Instamatic/bot?style=flat" alt="Stars"/>
     </a>
-    <a href="https://github.com/GramAddict/bot/stargazers">
-	    <img src="https://img.shields.io/github/stars/gramaddict/bot?style=flat" alt="">
+    <a href="https://img.shields.io/github/last-commit/Instamatic/bot/master?style=flat">
+      <img src="https://img.shields.io/github/last-commit/Instamatic/bot/master?style=flat" alt="Last Commit"/>
     </a>
-    <a href="https://img.shields.io/github/last-commit/gramaddict/bot/master?style=flat">
-	    <img src="https://img.shields.io/github/last-commit/GramAddict/bot/master?style=flat" alt="">
-    </a>
-    <a href="https://pypi.org/project/gramaddict/">
-      <img src="https://img.shields.io/pypi/dm/gramaddict" alt="">
-    </a>
-    <a href="https://github.com/GramAddict/bot#backers">
-	    <img src="https://img.shields.io/opencollective/backers/gramaddict?style=flat" alt="">
-    </a>
-    <a href="https://discord.gg/NK8PNEFGFF">
-	    <img src="https://img.shields.io/discord/771481743471017994?style=flat" alt="">
-    </a>
-    <a href="https://duckduckgo.com/?q=where+can+i+find+old+ig+version+apk&t=newext&atb=v376-1&df=y&ia=web">
-        <img src="https://img.shields.io/badge/partially_works_on_ig_version-263.2.0.19.104-orange" alt="">
-    </a>
-</p>
-
-
-
-<br />
-
-# Why should I automate my Instagram account?
-It's very hard nowadays to grow an account. Have you ever been on the explore page? IG will show your post only to close accounts & accounts you interact most with, you will never be on the explore page. Nobody will see your beautiful photos, your hilarious memes, or whatever you are posting. But now you can do something about that! With GramAddict you can __get noticed easily__, and if you really deserve it, your account will __grow super fast__!
-
-## So, do I need to publish good content to grow?
-Of course you have to! This bot will mainly help you to get the __visibility you deserve__ and which is Instagram not giving you.
-
-## Ok but I don't know how to start this journey...
-Don't worry about that now, it's not that hard to start botting with GramAddict! I tried to make it as noob-friendly as possible. In any case, if you follow the docs with all the steps provided, you will make it! You are also invited to join our community and ask for any help!
-
-## There is a community around this project?
-Yes! We are on __discord__ and we count a lot of __active users__ you can ask us whatever you want!
-
-  <a href="https://discord.gg/NK8PNEFGFF">
-    <img src="https://img.shields.io/discord/771481743471017994?style=flat" alt="">
-  </a>
-
-## I saw there are a lot of similar projects on GitHub, why should I choose this one?
-You're right, there are plenty of other bot solutions. Most of them use API requests. However, you will get your account banned if you use API (1-30 days)!
-There's also a very similar project to this one, yet it's not free and the dev doesn't care about the community much. They removed few lines from the core and ask you for a subscription plan in order to use those features. Furthermore, you don't even know what's the real code during execution - it's encrypted. And if they are stealing something else? Who knows? I don't.
-This bot is __free to use__ and __open source__, you won't get charged for few extra lines, __EVER__.
-I'm focused on the community and not on finding ways how to get money out of this project. __I really care about the community__ and every dev should too. 🤗
-
-## So this bot does not use API?
-__No__ this bot is working through __adb__ and is powered by __uiautomator2__ which is a testing wrapper for Android devices. In fact, your device (or an emulator) is used for doing the botting sh*it. That's very secure compared to other botting systems around there. I also made it look as much human as possible. You can think about the bot as a __stupid__ friend using your phone and doing things for you. The example bottom is quite old but will show you what we are talking about.
-<p align="center">
-  <img src="https://github.com/GramAddict/bot/raw/master/res/demo.gif">
-</p>
-
-## Urra! I'll never get banned anymore with this bot!
-No no no, wait! 🤦
-You have to configure the bot for doing things as a human would do. Do you really spend all the day scrolling on Instagram? If yes contact a medic :P
-You don't have to do so many actions or Instagram will block you. That appends even if you do that by your hands.. Have you ever added a lot of people in a row and got blocked for that action? Or spamming people with a link in PM?
-__DON'T F*CKING DO THAT__
-
-__Be gently and anonymous and nobody will notice that you're botting, trust me__.
-
-## Do I need a computer for running the bot?
-Yes, but you can also run it [directly on your phone](https://docs.gramaddict.org/#/termux)!!
-
-In any case, you can decide to use a physical device or an emulator. If you're under Windows I suggest you use [Memu](https://www.memuplay.com/), under Mac OS we found out that [Android studio](https://developer.android.com/studio) works well (Installable with [homebrew](https://formulae.brew.sh/cask/android-studio)).
-For hosting the bot you can use:
-- your computer (with Windows, macOS, or Linux)
-- a Raspberry (which is a cheap little pc Linux based)
-
-## Cool! What can I do with this bot?
-There are lots of __cool features__ you can use __for free__!
-- Works without rooting
-- Works with both emulators and physical devices
-- Can be used stand-alone (without the use of a computer)
-- Includes realistic random human-like delays and actions
-- Can watch stories while interacting
-- Comment post with emojis and [spintax logic](https://github.com/GramAddict/docs/blob/main/configuration.md#spintax-support)
-- Send PM
-- Type like a human (letter by letter by faking using suggestions. For example, you won't type `H - e - l - l - o` letter by letter but something like `H - He - Hello`)
-- Browse carousels and watch their contents
-- Watch videos for a specific amount of time
-- Scheduler
-- Getting tasty telegram reports
-- Supports multiple actions in one session
-- Lots of customizable limits to keep your account safe from soft bans
-- Available interactions
-    - interact with a user's followers or following
-    - interact with a top or recent hashtag's post likers
-    - interact with a top or recent hashtag post
-    - interact with a top or recent place's post likers
-    - interact with a top or recent place post
-    - interact with user's post likers
-    - interact with a single blogger
-    - interact with your feed
-    - interact with users from a list (*.txt)
-    - interact with posts from links inside a list (*.txt)
-    - unfollow any followers
-    - unfollow any followers, followed by bot
-    - unfollow any followers, followed by bot, who don't follow you back
-    - unfollow from a list (*.txt)
-    - scrape mode for collecting usernames instead of interacting with them (you will find more information about that in the doc)
-
-- Lots of available filters to customize who you interact with
-    - you can blacklist people to avoid interacting with them
-    - you can whitelist people to not remove them when you unfollow people
-    - biography main characters and language
-    - profile name main characters
-    - private / public / business / non business account
-    - number of posts / followers / following
-    ... and more!
-<br />
-
-Full documentation available on [docs.gramaddict.org](https://docs.gramaddict.org)
-
-## Telegram reports? What's that?
-You can get __reports__ through telegram from your bot activities!
-[Follow this guide to accomplish that](https://docs.gramaddict.org/#/configuration?id=telegram-reports).
-
-<img src="https://github.com/GramAddict/bot/raw/master/res/telegram-reports.png" width="200">
-
-> In this case trends are negative because I use this account only for tuning this bot, and it's private...
-> I didn't accept anyone lately so the trends are meh :P
-
-Cool, isn't it? 💦
-# Quick start
-Now that you're there you still don't know how to install that whole thing.
-I'll try to help you accomplish that with a short tutorial. The full is available [here](https://docs.gramaddict.org/#/quickstart).
-
-## What do you need:
-- a computer (with Windows, macOS or Linux)
-- Python installed on your machine (with pip)
-- Adb tools
-- a physical device or an emulator (with Android 4.4+)
-### Step 1: Install Python (>=3.6):
->Python 3.10 is currently not supported!
-
-If you're on Linux or macOS you should have Python and Git installed, just check that your Python version is >= 3.6.
-
-On Windows you have to [install it](https://www.python.org/downloads/release/python-397/) for sure.
-
-Failed? [Detailed tutorial here](https://docs.gramaddict.org/#/quickstart?id=step-1-install-python-if-not-installed).
->A little reminder: we refer to python with __python3__. You may also have python2 installed if you're on Linux for example. If you're on Windows you can use __python__ instead of python3.
->Check which python alias you have to use by typing `python -V` or `python3 -V` or `py -V` and use the right one for the rest of the tutorial.
-
->Check that pip3 is installed by typing `pip3 -V`
->If that returns an error you have to install it! How? [Google is your best friend!](https://www.google.com/search?q=how+to+install+pip) :P
-### Step 2: Install GramAddict:
-You can install GramAddict in two ways: with __pip__ or with __git__.
-Is good practice creating virtual environments when you install a new package. That will save you from a lot of problems!
-
-#### Create a virtual environment
-We create a virtual environment called `.venv` and activate it:
-
-- create a directory where you will create the new environment
-- write in console: `python3 -m venv .venv`
-  > We use `venv` instead of `virtualenv` because `venv` is shipped directly with python3 and you don't have to install anything 🤪
-- activate the .venv:
-    - `source .venv/bin/activate` on Linux/macOS
-    - `.venv\Scripts\activate.bat` on Windows cmd
-    - `.venv\Scripts\activate.ps1` on Windows PowerShell
-      > If you activate the venv correctly, you will see a little (.venv) on the left side of the command line!
-#### With pip (I suggest you this way):
-
-- install the package: `pip3 install GramAddict`
-- check if it's installed: `gramaddict --version`
-- if everything is fine you will get the GramAddict version installed 🥳
-
-#### With git:
-> __Warning:__ console commands like `gramaddict init`, `gramaddict dump` and `gramaddict run` won't work if you installed the bot with git.
-- clone the project: `git clone https://github.com/GramAddict/bot.git gramaddict`
-- enter the gramaddict folder: `cd gramaddict`
-- install the requirements: `pip3 install -r requirements.txt`
-
-### Step 3: Install adb:
-Adb stands for [Android Debug Bridge](https://developer.android.com/studio/command-line/adb). It's needed for making this bot working properly. I think this one is the hardest part to accomplish but don't give up! You can do it, with my help. 💪
-1. download [this package](https://developer.android.com/studio/releases/platform-tools) and unzip it somewhere and remind the path
-   > __Warning:__ place that where you're sure you won't ever delete it, otherwise the bot won't work anymore!
-2. add platform-tools path to the PATH environment variable
-   - if you're on __Linux/macOS__ that's pretty easy:
-      - open ~/.bash_profile with any text editor you like
-      - add the following line with the full path to the platform-tools directory: export PATH=~/Library/Android/sdk/platform-tools/:$PATH. This path may be different depending on the way you installed platform-tools
-      - save file and restart Terminal
-   - on __Windows__ there are more steps to accomplish that:
-      - open Windows Explorer (you can press WINKEY+E) and right-click "My Computer" on left side
-      - in the pop-up menu, click `Properties`
-      - in the `System Properties` window, click the `Advanced` tab, and then click `Environment Variables`
-      - in the `System Variables` window, highlight `Path`, and click `Edit`
-      - in the `Edit System Variables` window, press on `New`
-      - enter the full path for the folder platform-tools you unzipped before
-      - press all the Ok and restart Command Prompt
-3. check that everything is fine
-   - write `adb version`, you should get something like that:
-      > C:\Users\dedil>adb version
-      > Android Debug Bridge version 1.0.41
-      > Version 30.0.5-6877874
-
-### Step 4: Set up the device:
-
-**Physical device**
-
-1. First thing you have to do is to [enable developer options and USB debugging](https://developer.android.com/studio/debug/dev-options#enable).
-2. connect your phone to your computer with a USB cable
-3. device will ask you to allow connection. Press "Connect"
-
-**Emulator for Mac OS**
-
-1. Install the [Homebrew](https://brew.sh)
-2. Install the [Cask](https://cask.readthedocs.io/en/latest/index.html) by running `brew install cask`
-3. Add the Cask application folder to your `$PATH`, e.g. `echo 'export PATH="$HOME/.cask/bin:$PATH"' >> ~/.bash_profile` and open a new terminal or reload with `source ~/.bash_profile`
-4. Install the [Android Studio](https://formulae.brew.sh/cask/android-studio)
-5. Run the Android Studio and click on 'More Actions -> Virtual Device Manager', then select the device and image, I found out that Pixel 2 API 28 combo works well.
-6. Run the virtual device and install the Instagram app on it, don't forget to log in.
-
-**Verify the device with adb**
-
-Type `adb devices` in terminal
-   - a list of devices attached should be displayed, if not you did something wrong
-      > List of devices attached
-      > A0B1CD2345678901    device
-
-   - this is your device ID, you have to use it only if you have more than one device connected at the same time
-
-### Step 5: Start the bot:
-
-This bot works only if your Instagram is in [English](https://help.instagram.com/111923612310997).
-1. initialize uiautomator2: `uiautomator2 init`
-2. initialize GramAddict: `gramaddict init your_ig_account_name_here`
-    > __Warning:__ works only if you installed the bot with pip, if you used git you have to create account folder and youraccountname folder manually.
-    - that script will crate all the files you need for configure and start this bot
-    - you will find them inside the folder `accounts/youraccountname/`
-      ```sh
-        gramaddict/
-          run.py
-          accounts/
-            youraccountname/
-              config.yml
-              telegram.yml
-              filters.yml
-              whitelist.txt
-              blacklist.txt
-              comments_list.txt
-              pm_list.txt
-      ```
-3. now that you have all the requirements you have to configure the whole thing by [following this guide](https://docs.gramaddict.org/#/configuration)
-4. now you're done, and you can finally start the bot: `python3 run.py --config accounts/yourusername/config.yml` or `gramaddict run --config accounts/yourusername/config.yml`
-
-Failed? [Check this out!](https://docs.gramaddict.org/#/quickstart?id=troubleshooting)
-
-# Bot crashes, what should I do?
-The script isn't perfect and may fail sometimes. If this is the case you can open a ticket on our [discord channel](https://discord.gg/NK8PNEFGFF). In that way you won't share with anyone your Instagram account name 😈. We'll be very happy to help you!
-
-# WOW! You dedicated so much time to this project! Why you did that for free??
-Well, we used to be in three a long time ago but suddenly my two friends left. This has been an opportunity for me to improve my skills in Python and that's why I didn't leave the project and keep maintaining it.
-But of course donations are very welcome, so if you think I did a great job you can buy me a beer :)
-
-
-<a  href="https://www.buymeacoffee.com/mastrolube"  target="_blank"><img  src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"  hspace="10" alt="Buy Me A Coffee"  style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;"  ></a>
-
-# Can I do something to make this project grown?
-On GitHub there is a `star system` which indicates how good a project is. If you like this project it will be amazing if you can press the little star at the top! ⭐
-# Contributors
-
-This project exists thanks to all of our Contributors [[Contribute](https://docs.gramaddict.org/#/contributing)].
-
-<a href="https://github.com/gramaddict/bot/graphs/contributors"><img src="https://opencollective.com/gramaddict/contributors.svg?width=890&button=false" /></a>
-
-<br />
-
-# Backers
-
-Thank you to everyone that supports us financially! 🙏 [[Become a backer](https://opencollective.com/gramaddict#backer)]
-
-<a href="https://opencollective.com/gramaddict#backers" target="_blank"><img src="https://opencollective.com/gramaddict/backers.svg?width=890"></a>
-<br />
-
-# Talk botty with us
-
-<p>
-  <a href="https://discord.gg/NK8PNEFGFF">
-    <img hspace="3" alt="Join us on Discord" src="https://github.com/GramAddict/bot/raw/master/res/discord.png" height=84/>
-  </a>
+    <img src="https://img.shields.io/badge/tested_with_instagram-330.0.0.40.92-green" alt="Tested with Instagram 330.0.0.40.92"/>
+  </p>
 </p>
 
 ---
 
-> **Disclaimer**<a name="disclaimer" />: This project comes with no guarantee or warranty. You are responsible for whatever happens from using this project. It is possible to get soft or hard banned by using this project if you are not careful.
+## ⚡ Quick Start - Multi-Account Automation
+
+**Want to run multiple Instagram accounts? It's super easy!**
+
+```bash
+# 1. Create multiple accounts
+python run.py init account1
+python run.py init account2
+python run.py init account3
+
+# 2. Configure each account (edit config.yml files)
+
+# 3. Run ALL accounts automatically
+./scripts/auto_run_managed.sh
+```
+
+**That's it!** Instamatic will automatically cycle through all your accounts, running each one with its own settings and limits. No manual intervention needed!
+
+---
+
+## 🚀 What is Instamatic?
+
+Instamatic is a professional-grade Instagram automation tool designed for Android devices. It simulates human-like interactions to help grow your Instagram following and engagement organically. Unlike API-based bots that risk account suspension, Instamatic uses Android's UI automation framework to interact with Instagram naturally.
+
+### ✨ Key Features
+
+- **🤖 Human-like Automation**: Realistic delays, typing patterns, and interaction behaviors
+- **📱 No Root Required**: Works on any Android device or emulator
+- **🔒 Account Safe**: Uses UI automation instead of risky API calls
+- **⚙️ Highly Configurable**: Extensive customization options for every action
+- **📊 Detailed Analytics**: Comprehensive reporting and statistics
+- **🔄 Multi-Account Support**: Manage unlimited Instagram accounts with automated scripts
+- **⚡ Auto-Run Scripts**: Run multiple accounts automatically with `./auto_run_managed.sh`
+- **📱 Cross-Platform**: Works on Windows, macOS, and Linux
+- **🎯 Smart Filtering**: Advanced targeting and filtering options
+
+---
+
+## 🎯 Why Choose Instamatic?
+
+### Traditional Instagram Bots vs Instamatic
+
+| Feature | Traditional API Bots | Instamatic |
+|---------|---------------------|------------|
+| **Account Safety** | ❌ High ban risk (1-30 days) | ✅ Very low risk |
+| **Detection** | ❌ Easily detected | ✅ Human-like behavior |
+| **Cost** | ❌ Often paid/subscription | ✅ 100% Free & Open Source |
+| **Transparency** | ❌ Encrypted/closed source | ✅ Fully open source |
+| **Customization** | ❌ Limited options | ✅ Extensive configuration |
+| **Reliability** | ❌ Breaks with Instagram updates | ✅ Auto-adapts to UI changes |
+
+### 🛡️ Safety First
+
+Instamatic is designed with account safety as the top priority:
+
+- **Human-like behavior patterns** prevent detection
+- **Realistic delays** between actions
+- **Smart limits** to avoid Instagram's anti-bot measures
+- **Gradual scaling** to build organic-looking activity
+- **No API usage** - works through the official Instagram app
+
+---
+
+## 🚀 Quick Start Guide
+
+### Prerequisites
+
+- **Computer**: Windows, macOS, or Linux
+- **Python**: Version 3.6-3.9 (3.10+ not supported)
+- **Android Device**: Physical device or emulator (Android 4.4+)
+- **ADB Tools**: Android Debug Bridge installed
+- **Instagram**: Latest version installed and logged in
+
+### Installation
+
+#### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Instamatic/bot.git
+cd bot
+```
+
+#### 2. Create Virtual Environment
+
+```bash
+# Create virtual environment
+python3 -m venv venv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+```
+
+#### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+#### 4. Install ADB Tools
+
+**Windows:**
+1. Download [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+2. Extract to a permanent location (e.g., `C:\platform-tools`)
+3. Add to PATH environment variable
+
+**macOS:**
+```bash
+brew install android-platform-tools
+```
+
+**Linux:**
+```bash
+sudo apt-get install android-tools-adb
+```
+
+#### 5. Set Up Android Device
+
+**Physical Device:**
+1. Enable Developer Options and USB Debugging
+2. Connect via USB cable
+3. Allow USB debugging when prompted
+
+**Emulator:**
+- Use Android Studio's AVD Manager
+- Recommended: Pixel 2 API 28 or newer
+
+#### 6. Verify Setup
+
+```bash
+# Check ADB connection
+adb devices
+
+# Should show your device:
+# List of devices attached
+# A0B1CD2345678901    device
+```
+
+### First Run
+
+#### 1. Initialize Instamatic
+
+```bash
+python run.py init your_username
+```
+
+This creates your account configuration folder at `accounts/your_username/`
+
+#### 2. Configure Your Account
+
+Edit `accounts/your_username/config.yml`:
+
+```yaml
+# Basic Configuration
+device: "your_device_id"  # From 'adb devices'
+app-id: "com.instagram.android"
+username: "your_username"
+password: "your_password"
+
+# Safety Settings
+follow-limit: 10-15
+like-limit: 50-80
+comment-limit: 5-10
+
+# Actions to perform
+actions:
+  - interact_blogger:
+      username: "target_account"
+      amount: 20
+      randomize: true
+```
+
+#### 3. Start Botting
+
+```bash
+python run.py run --config accounts/your_username/config.yml
+```
+
+---
+
+## 🚀 Multi-Account Automation (Auto-Run Scripts)
+
+**Instamatic's most powerful feature: Run unlimited Instagram accounts automatically!**
+
+### Why Use Auto-Run Scripts?
+
+- **🔄 Unlimited Accounts**: Run as many Instagram accounts as you want
+- **⏰ Automated Scheduling**: Set up accounts to run at different times
+- **🛡️ Account Safety**: Each account runs independently with its own limits
+- **📊 Centralized Management**: Monitor all accounts from one place
+- **🔄 Round-Robin**: Automatically cycle through accounts
+- **⚡ Easy Setup**: One-time configuration, runs forever
+
+### Quick Multi-Account Setup
+
+#### 1. Initialize Multiple Accounts
+
+```bash
+# Create accounts for different purposes
+python run.py init business_account
+python run.py init personal_account  
+python run.py init niche_account
+python run.py init backup_account
+```
+
+#### 2. Configure Each Account
+
+Edit each account's `config.yml` with different settings:
+
+```yaml
+# accounts/business_account/config.yml
+device: "your_device_id"
+username: "business_account"
+follow-limit: 20-30
+like-limit: 100-150
+
+# accounts/personal_account/config.yml  
+device: "your_device_id"
+username: "personal_account"
+follow-limit: 10-15
+like-limit: 50-80
+```
+
+#### 3. Use Auto-Run Scripts
+
+**Option A: Managed Auto-Run (Recommended)**
+```bash
+# Runs all accounts with smart management
+./scripts/auto_run_managed.sh
+```
+
+**Option B: Individual Auto-Run Scripts**
+```bash
+# Run specific accounts
+./scripts/auto_run_2.sh  # Account 1
+./scripts/auto_run_3.sh  # Account 2  
+./scripts/auto_run_4.sh  # Account 3
+./scripts/auto_run_5.sh  # Account 4
+```
+
+### Auto-Run Script Features
+
+#### 🔄 **Round-Robin Execution**
+- Automatically cycles through all configured accounts
+- Each account runs for its configured session length
+- Built-in delays between account switches
+- Prevents account overlap and conflicts
+
+#### ⏰ **Smart Scheduling**
+- Configurable session lengths per account
+- Automatic pause between sessions
+- Error handling and recovery
+- Logging for each account
+
+#### 🛡️ **Account Safety**
+- Each account has independent limits
+- No cross-account interference
+- Individual error tracking
+- Automatic restart on failures
+
+#### 📊 **Monitoring & Logs**
+- Separate log files for each account
+- Real-time status monitoring
+- Performance tracking
+- Error reporting
+
+### Advanced Multi-Account Configuration
+
+#### Custom Auto-Run Script
+
+Create your own auto-run script:
+
+```bash
+#!/bin/bash
+# custom_auto_run.sh
+
+ACCOUNTS=("account1" "account2" "account3" "account4")
+DEVICE_ID="your_device_id"
+
+for account in "${ACCOUNTS[@]}"; do
+    echo "Starting $account..."
+    python run.py run --config "accounts/$account/config.yml" --device "$DEVICE_ID"
+    
+    # Wait between accounts
+    sleep 300  # 5 minutes
+done
+```
+
+#### Scheduled Multi-Account Execution
+
+Set up cron jobs for different accounts:
+
+```bash
+# Edit crontab
+crontab -e
+
+# Run different accounts at different times
+0 9 * * * cd /path/to/Instamatic && ./auto_run_2.sh    # 9 AM
+0 14 * * * cd /path/to/Instamatic && ./auto_run_3.sh   # 2 PM  
+0 19 * * * cd /path/to/Instamatic && ./auto_run_4.sh   # 7 PM
+0 22 * * * cd /path/to/Instamatic && ./auto_run_5.sh   # 10 PM
+```
+
+### Multi-Account Best Practices
+
+#### 🎯 **Account Segmentation**
+- **Business Accounts**: Higher limits, professional targeting
+- **Personal Accounts**: Lower limits, casual interactions
+- **Niche Accounts**: Specific hashtag/location targeting
+- **Backup Accounts**: Spare accounts for testing
+
+#### ⚙️ **Configuration Strategy**
+```yaml
+# High-volume business account
+follow-limit: 30-50
+like-limit: 200-300
+session-length: 60-90
+
+# Conservative personal account  
+follow-limit: 5-10
+like-limit: 20-40
+session-length: 20-30
+```
+
+#### 🛡️ **Safety Guidelines**
+- **Different Devices**: Use different devices for different account types
+- **Time Separation**: Run accounts at different times of day
+- **Content Variation**: Use different content strategies per account
+- **Limit Variation**: Vary limits and patterns between accounts
+
+### Monitoring Multiple Accounts
+
+#### Real-Time Monitoring
+```bash
+# Monitor all account logs
+tail -f logs/*.log
+
+# Monitor specific account
+tail -f logs/business_account.log
+
+# Check account status
+ps aux | grep "run.py"
+```
+
+#### Performance Tracking
+```bash
+# Check account performance
+ls -la logs/
+grep "Session finished" logs/*.log
+grep "Error" logs/*.log
+```
+
+---
+
+## 📋 Complete Feature List
+
+### 🔄 Core Actions
+
+- **Follow Users**: Follow followers/following of target accounts
+- **Unfollow Users**: Smart unfollowing with various strategies
+- **Like Posts**: Like posts from hashtags, locations, or users
+- **Comment**: Human-like commenting with emoji support
+- **Send DMs**: Direct message users with personalized content
+- **Watch Stories**: View and interact with stories
+- **Watch Videos**: Watch videos for realistic durations
+
+### 🎯 Targeting Options
+
+- **Hashtag Targeting**: Target specific hashtags (top/recent posts)
+- **Location Targeting**: Target specific locations
+- **User Targeting**: Target specific users' followers/following
+- **Feed Interaction**: Interact with your own feed
+- **List-based Targeting**: Use custom user/post lists
+
+### 🛡️ Safety Features
+
+- **Smart Limits**: Configurable daily/hourly limits
+- **Human Delays**: Realistic delays between actions
+- **Randomization**: Random action patterns
+- **Blacklist/Whitelist**: User filtering
+- **Profile Filtering**: Advanced user profile filtering
+- **Session Management**: Smart session handling
+
+### 📊 Analytics & Reporting
+
+- **Real-time Stats**: Live statistics during operation
+- **Detailed Reports**: Comprehensive activity reports
+- **Telegram Integration**: Get reports via Telegram
+- **Data Export**: Export data for analysis
+- **Performance Metrics**: Track growth and engagement
+
+---
+
+## 📖 Detailed Configuration
+
+### Account Configuration (`config.yml`)
+
+```yaml
+# Device Settings
+device: "your_device_id"
+app-id: "com.instagram.android"
+
+# Account Credentials
+username: "your_username"
+password: "your_password"
+
+# Safety Limits (per session)
+follow-limit: 10-15
+like-limit: 50-80
+comment-limit: 5-10
+unfollow-limit: 20-30
+
+# Session Settings
+session-length: 30-60  # minutes
+session-pause: 10-20   # minutes between sessions
+
+# Actions Configuration
+actions:
+  - interact_blogger:
+      username: "target_account"
+      amount: 20
+      randomize: true
+      follow: true
+      like: true
+      comment: true
+      comment-probability: 0.3
+      
+  - interact_hashtag:
+      hashtag: "photography"
+      amount: 30
+      randomize: true
+      follow: true
+      like: true
+      
+  - unfollow_non_followers:
+      amount: 20
+      only_not_follow_me: true
+```
+
+---
+
+## 🔧 Advanced Usage
+
+### Multi-Account Management
+
+**Instamatic supports unlimited Instagram accounts with automated management!**
+
+```bash
+# Initialize multiple accounts
+python run.py init business_account
+python run.py init personal_account
+python run.py init niche_account
+
+# Run specific account manually
+python run.py run --config accounts/business_account/config.yml
+
+# Run ALL accounts automatically (RECOMMENDED)
+./scripts/auto_run_managed.sh
+
+# Or use individual auto-run scripts
+./scripts/auto_run_2.sh  # Runs account 1
+./scripts/auto_run_3.sh  # Runs account 2
+./scripts/auto_run_4.sh  # Runs account 3
+./scripts/auto_run_5.sh  # Runs account 4
+```
+
+**Key Benefits:**
+- 🔄 **Unlimited Accounts**: Run as many as you want
+- ⏰ **Automated Scheduling**: Set and forget
+- 🛡️ **Account Safety**: Each account runs independently
+- 📊 **Centralized Logging**: Monitor all accounts from one place
+
+### Custom Actions
+
+Create custom interaction patterns:
+
+```yaml
+actions:
+  - interact_blogger:
+      username: "influencer_account"
+      amount: 50
+      follow: true
+      like: true
+      comment: true
+      comment-probability: 0.2
+      stories: true
+      
+  - interact_hashtag:
+      hashtag: "yourniche"
+      amount: 100
+      follow: true
+      like: true
+      stories: true
+      
+  - unfollow_non_followers:
+      amount: 30
+      only_not_follow_me: true
+      skip_whitelist: true
+```
+
+---
+
+## 📊 Monitoring and Analytics
+
+### Real-time Monitoring
+
+```bash
+# Monitor bot activity
+tail -f logs/your_account.log
+
+# Check device status
+python uiautomator2_monitor.py
+```
+
+### Telegram Reports
+
+Set up Telegram bot for automated reports:
+
+1. Create bot with [@BotFather](https://t.me/botfather)
+2. Get bot token
+3. Get your chat ID
+4. Configure `telegram.yml`
+5. Receive automated reports
+
+---
+
+## 🛠️ Troubleshooting
+
+### Common Issues
+
+**Device Not Found:**
+```bash
+# Check ADB connection
+adb devices
+
+# Restart ADB server
+adb kill-server
+adb start-server
+```
+
+**Instagram Not Responding:**
+```bash
+# Check Instagram app
+adb shell am start -n com.instagram.android/.MainActivity
+
+# Clear Instagram cache
+adb shell pm clear com.instagram.android
+```
+
+**Bot Crashes:**
+```bash
+# Check logs
+tail -f logs/your_account.log
+
+# Restart with debug mode
+python run.py run --config accounts/your_account/config.yml --debug
+```
+
+---
+
+## 🔒 Safety Guidelines
+
+### Account Protection
+
+1. **Start Slow**: Begin with minimal activity
+2. **Be Realistic**: Use human-like patterns
+3. **Monitor Closely**: Watch for Instagram warnings
+4. **Take Breaks**: Don't run 24/7
+5. **Quality Content**: Ensure your content is engaging
+
+### Best Practices
+
+- **Follow Limits**: 10-20 follows per session maximum
+- **Like Limits**: 50-100 likes per session maximum
+- **Comment Limits**: 5-10 comments per session maximum
+- **Session Length**: 30-60 minutes maximum
+- **Break Time**: 2-4 hours between sessions
+
+### Warning Signs
+
+- Instagram asking for phone verification
+- Reduced reach on posts
+- Account temporarily restricted
+- Unusual login notifications
+
+If you see these signs, **STOP** and take a break for 24-48 hours.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how you can help:
+
+### Development Setup
+
+```bash
+# Fork the repository
+git clone https://github.com/yourusername/Instamatic.git
+cd Instamatic
+
+# Create development environment
+python3 -m venv dev_env
+source dev_env/bin/activate  # On Windows: dev_env\Scripts\activate
+
+# Install development dependencies
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+
+# Run tests
+python -m pytest test/
+```
+
+### Areas for Contribution
+
+- **Bug Fixes**: Report and fix bugs
+- **New Features**: Add new functionality
+- **Documentation**: Improve documentation
+- **Testing**: Add test coverage
+- **UI Improvements**: Enhance user experience
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## ⚠️ Disclaimer
+
+**Important**: This tool is for educational and research purposes only. Users are responsible for complying with Instagram's Terms of Service and applicable laws. The developers are not responsible for any account suspensions or other consequences resulting from the use of this tool.
+
+**Use at your own risk**: While Instamatic is designed to be safe, Instagram's policies and detection methods can change. Always use realistic settings and monitor your account closely.
+
+---
+
+## 🆘 Support
+
+### Getting Help
+
+- **Documentation**: Check this README and configuration files
+- **Issues**: Open an issue on GitHub
+- **Discussions**: Use GitHub Discussions for questions
+- **Community**: Join our community for support
+
+### Reporting Issues
+
+When reporting issues, please include:
+
+1. **System Information**: OS, Python version, device type
+2. **Configuration**: Your config files (remove sensitive data)
+3. **Logs**: Relevant log files
+4. **Steps to Reproduce**: Clear steps to reproduce the issue
+5. **Expected vs Actual**: What you expected vs what happened
+
+---
+
+## 🎉 Acknowledgments
+
+- **Original Developers**: Based on the original GramAddict project
+- **Community**: All contributors and users
+- **Open Source**: Built on amazing open source libraries
+- **Android Community**: For UIAutomator2 and related tools
+
+---
+
+## 📈 Roadmap
+
+### Upcoming Features
+
+- **Web Dashboard**: Browser-based control panel
+- **AI-Powered Targeting**: Smart user targeting
+- **Advanced Analytics**: Detailed growth analytics
+- **Mobile App**: Native mobile application
+- **Cloud Deployment**: Easy cloud hosting options
+
+### Version History
+
+- **v3.2.12**: Current stable version
+- **Tested with**: Instagram 330.0.0.40.92
+- **Next**: v3.3.0 with enhanced features
+
+---
+
+**Made with ❤️ for the Instagram automation community**
+
+*Instamatic - Professional Instagram automation, simplified.*
